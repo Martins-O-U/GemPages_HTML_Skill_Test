@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost" rel="stylesheet">
+    <title>Minimalist-Homepage</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <header id="myHeader">
+            <nav id="navbar">
+                <div id="logo">
+                    <a href="indexx.html" id="logo-link">LOGO</a>
+                </div>
+                <div id="main-nav">
+                    <a href="#" class="navlink" id="home">Home</a>
+                    <a href="#" class="navlink" id="men">Men</a>
+                    <a href="#" class="navlink" id="women">Women</a>
+                    <a href="#" class="navlink" id="shop">Shop</a>
+                    <a href="#" class="navlink" id="product">Product</a>
+                    <a href="#" class="navlink" id="pages">Pages</a>
+                    <a href="#" class="navlink" id="contact">Contact</a>
+                    <a href="#" class="navlink" id="blogs">Blogs</a>
+                </div>
+            </nav>
+        </header>
+        <section class="content">
+            <div id="introdiv">
+                <p id="intro-para-1">
+                    Enjoy This
+                </p>
+                <p id="intro-para-2">Winter Trend</p>
+                <p id="discover">
+                    Discover now latest collection
+                </p>
+            </div>
+            <div id="btn-div"><button>Shop now</button></div>
+        </section>
+        <section id="display-div">
+            <div id="left-div">
+                <p id="span-para-l"><span id="span-info-l">New Arrivals</span></p>
+            </div>
+            <div id="right-div">
+                <div id="right-div-1">
+                    <p id="span-para-r">
+                        <spn id="span-info-r">Women Collection</spn>
+                    </p>
+                </div>
+                <div id="right-div-2">
+                    <p id="span-para-r"><span id="span-info-r">Men Collection</span></p>
+                </div>
+            </div>
+        </section>
+        <section id="form-section">
+            <div>
+                <img src="images/line_1.png" alt="fancy line" id="line1">
+            </div>
+            <form>
+                <p id="newsletter">Newsletters</p>
+                <p id="news-para">Signup to receive information about new products</p>
+                <div id="input-div">
+                    <input type="text" placeholder="Email Address" />
+                    <spn id="spa-arrow"><img src="images/001-right-arrow.png" alt="right arrow"></spn>
+                </div>
+                <div>
+                    <img src="images/line.png" alt="fancy line">
+                </div>
+            </form>
+            <div id="socials">
+                <span class="spansocial"><img src="images/Facebook.png" alt="Facebook Social" class="spa-social"></span>
+                <span class="spansocial"><img src="images/Twitter.png" alt="Twitter Social" class="spa-social"></span>
+                <span class="spansocial"><img src="images/instagram.png" alt="Instagram Social"
+                        class="spa-social"></span>
+            </div>
+            <div id="line2">
+                <img src="images/line_2.png" alt="fancy line" id="line2">
+            </div>
+        </section>
+
+    </div>
+    <script>
+        var headertop = document.getElementById("main-nav");
+        var btns = headertop.getElementsByClassName("navlink");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+            });
+        }
+
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>
